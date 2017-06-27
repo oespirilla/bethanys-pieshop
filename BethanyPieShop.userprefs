@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{9C39BF22-7BBB-453C-88E4-1F525ECEC23D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BethanyPieShop/Views/Pie/List.cshtml">
+    <Files>
+      <File FileName="BethanyPieShop/Views/Pie/List.cshtml" Line="1" Column="1" />
+      <File FileName="BethanyPieShop/Controllers/PieController.cs" Line="4" Column="22" />
+      <File FileName="BethanyPieShop/Models/IPieRepository.cs" Line="2" Column="25" />
+      <File FileName="BethanyPieShop/Models/ICategoryRepository.cs" Line="8" Column="41" />
+      <File FileName="BethanyPieShop/Models/MockPieRepository.cs" Line="24" Column="10" />
+      <File FileName="BethanyPieShop/Models/MockCategoryRepository.cs" Line="3" Column="1" />
+      <File FileName="BethanyPieShop/Program.cs" Line="25" Column="1" />
+      <File FileName="BethanyPieShop/BethanyPieShop.csproj" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BethanyPieShop PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
