@@ -6,13 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using BethanyPieShop.Models;
 using BethanyPieShop.ViewModels;
 
+// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
 namespace BethanyPieShop.Controllers
 {
     public class ShoppingCartController : Controller
     {
         private readonly IPieRepository _pieRepository;
-        
-        private readonly ShoppingCart  _shoppingCart;
+        private readonly ShoppingCart _shoppingCart;
 
         public ShoppingCartController(IPieRepository pieRepository, ShoppingCart shoppingCart)
         {
@@ -28,12 +29,32 @@ namespace BethanyPieShop.Controllers
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal(),
+                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
             };
 
             return View(shoppingCartViewModel);
         }
-    }
 
-    
+        public RedirectToActionResult AddToShoppingCart(int pieId)
+        {
+            var selectedPie = _pieRepository.Pies.FirstOrDefault(p => p.PieId == pieId);
+
+            if (selectedPie != null)
+            {
+                _shoppingCart.AddToCart(selectedPie, 1);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public RedirectToActionResult RemoveFromShoppingCart(int pieId)
+        {
+            var selectedPie = _pieRepository.Pies.FirstOrDefault(p => p.PieId == pieId);
+
+            if (selectedPie != null)
+            {
+                _shoppingCart.RemoveFromCart(selectedPie);
+            }
+            return RedirectToAction("Index");
+        }
+    }
 }

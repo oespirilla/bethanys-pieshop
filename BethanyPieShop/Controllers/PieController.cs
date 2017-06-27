@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BethanyPieShop.Models;
 using BethanyPieShop.ViewModels;
+
 
 namespace BethanyPieShop.Controllers
 {
@@ -17,13 +21,36 @@ namespace BethanyPieShop.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public ViewResult List()
+        public ViewResult List(string category)
         {
-            PieListViewModel piesListViewModel = new PieListViewModel();
-            piesListViewModel.Pies = _pieRepository.Pies;
-            piesListViewModel.CurrentCategory = "Cheese Cakes";
+            IEnumerable<Pie> pies;
+            string currentCategory = string.Empty;
 
-            return View(piesListViewModel);
+            if (string.IsNullOrEmpty(category))
+            {
+                pies = _pieRepository.Pies.OrderBy(p => p.PieId);
+                currentCategory = "All pies";
+            }
+            else
+            {
+                pies = _pieRepository.Pies.Where(p => p.Category.CategoryName == category)
+                   .OrderBy(p => p.PieId);
+                currentCategory = _categoryRepository.Categories.FirstOrDefault(c => c.CategoryName == category).CategoryName;
+            }
+
+            return View(new PieListViewModel
+            {
+                Pies = pies,
+                CurrentCategory = currentCategory
+            });
+        }
+        public IActionResult Details(int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+            if (pie == null)
+                return NotFound();
+
+            return View(pie);
         }
     }
 }
