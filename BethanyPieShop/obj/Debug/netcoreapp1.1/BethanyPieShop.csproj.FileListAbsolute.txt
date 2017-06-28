@@ -1,9 +1,8 @@
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/bin/Debug/netcoreapp1.1/BethanyPieShop.deps.json
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/bin/Debug/netcoreapp1.1/BethanyPieShop.runtimeconfig.json
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/bin/Debug/netcoreapp1.1/BethanyPieShop.runtimeconfig.dev.json
-/Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/obj/Debug/netcoreapp1.1/BethanyPieShop.AssemblyInfo.cs
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/bin/Debug/netcoreapp1.1/BethanyPieShop.dll
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/bin/Debug/netcoreapp1.1/BethanyPieShop.pdb
-/Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/obj/Debug/netcoreapp1.1/BethanyPieShop.csprojResolveAssemblyReference.cache
+/Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/obj/Debug/netcoreapp1.1/BethanyPieShop.AssemblyInfo.cs
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/obj/Debug/netcoreapp1.1/BethanyPieShop.dll
 /Users/oespirilla-dev/Projects/BethanyPieShop/BethanyPieShop/obj/Debug/netcoreapp1.1/BethanyPieShop.pdb
