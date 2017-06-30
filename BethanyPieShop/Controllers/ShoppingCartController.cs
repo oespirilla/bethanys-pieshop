@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BethanyPieShop.Models;
 using BethanyPieShop.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,6 +22,7 @@ namespace BethanyPieShop.Controllers
             _shoppingCart = shoppingCart;
         }
 
+        [Authorize]
         public ViewResult Index()
         {
             var items = _shoppingCart.GetShoppingCartItems();
